@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney Oden Portfolio</title>
+    <style>
+        body {
+            background-color: #79acac;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #91dcdc;
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            padding: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        button {
+            padding: 5px;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sydney Faith Oden</h1>
+        <p>Welcome to my portfolio. Navigate through the different pages to learn more!</p>
+    </header>
+    <img src="image.jpg">
+
+    <section>
+        <h2>About Me</h2>
+        <ul>
+            <li>Georgia Institute of Technology</li>
+            <li>3rd year Computational Media major</li>
+            <li>Currently working for Forensic Discovery</li>
+        </ul>
+    </section>
+
+    <button id="sceneButton">Go to Scene 2</button>
+    <header id="scene2Header" class="hidden">
+        <h1>Welcome to Scene 2</h1>
+        <p>This is the introduction to Scene 2.</p>
+    </header>
+    <img id="scene2Image" class="hidden" src="image2.jpg" alt="Scene 2 Image">
+
+    <section id="scene2Section" class="hidden">
+        <h2>Key Points</h2>
+        <ul>
+            <li>Point A: This is a point in Scene 2.</li>
+            <li>Point B: Another point in Scene 2.</li>
+        </ul>
+    </section>
+
+    <script>
+        const sceneButton = document.getElementById("sceneButton");
+        const scene2Header = document.getElementById("scene2Header");
+        const scene2Image = document.getElementById("scene2Image");
+        const scene2Section = document.getElementById("scene2Section");
+
+        sceneButton.addEventListener("click", () => {
+            scene2Header.classList.remove("hidden");
+            scene2Image.classList.remove("hidden");
+            scene2Section.classList.remove("hidden");
+
+            // Hide elements of Scene 1
+            header.style.display = "none";
+            img.style.display = "none";
+            section.style.display = "none";
+            sceneButton.style.display = "none";
+        });
+    </script>
+    
+</body>
+</html>
